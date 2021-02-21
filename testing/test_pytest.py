@@ -21,8 +21,6 @@ class TestCalc:
     @pytest.mark.parametrize("test_case",add.get_data('case'))
     def test_add_1(self, test_case):
         result = self.calc.add(test_case['a'] ,test_case['b'])
-        # print(test_case['a'])
-        # print(result)
         assert test_case['res'] == result
 
     @pytest.mark.parametrize("test_case",div.get_data('case'))
